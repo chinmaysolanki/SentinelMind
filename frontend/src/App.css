@@ -1,0 +1,140 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-header h1 {
+  margin: 0;
+}
+
+.App-main {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.threats-panel, .actions-panel {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.threats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.threat-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.threat-item:hover {
+  background-color: #f9f9f9;
+}
+
+.threat-item.selected {
+  border-color: #007bff;
+  background-color: #e6f2ff;
+}
+
+.threat-item h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.threat-item p {
+  margin: 0 0 10px 0;
+  color: #666;
+}
+
+.threat-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.severity {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.severity.low {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.severity.medium {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.severity.high {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.severity.critical {
+  background-color: #dc3545;
+  color: white;
+}
+
+.source {
+  color: #6c757d;
+}
+
+.action-details {
+  text-align: left;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.action-details h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.action-details p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.no-selection {
+  padding: 20px;
+  color: #6c757d;
+}
+
+.loading, .error {
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #dc3545;
+} 
